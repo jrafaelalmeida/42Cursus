@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/15 13:45:18 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/04/27 21:18:40 by jpacheco         ###   ########.fr       */
+/*   Created: 2023/04/27 21:09:19 by jpacheco          #+#    #+#             */
+/*   Updated: 2023/04/27 22:32:27 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	x;
+
+	x = ft_strlen(src) + 1;
+	i = 0;
+	if (!dest && !src)//verifica se alguma das strings e nula
+		return (0);
+	if (size != 0)
+	{
+		while (src[i] != '\0' && i < size - 1)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (x);
 }

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	reverse(char str[], int length)
+void	*reverse(char str[], int length)
 {
 	int	start;
 	int	end;
@@ -31,5 +31,5 @@ void	reverse(char str[], int length)
 }
 char	*ft_itoa(int n)
 {
-	
+	 
 }

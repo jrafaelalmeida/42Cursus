@@ -10,3 +10,32 @@
 #                                                                              #
 # **************************************************************************** #
 
+NAME := libft.a
+
+SRCS = ft_strtrim.c 
+
+OBJS := ${SRCS:.c=.o}
+
+CC:=cc
+CFLAGS := -Wall -Wextra -Werror
+
+RM := /bin/rm -rf
+CL := ar -rc
+RL := ar -s
+
+
+${NAME}: ${OBJS}
+	${CL} ${NAME} ${OBJS}
+	${RL} ${NAME}
+	echo 'hello'
+
+all: ${NAME}
+
+clean:
+	${RM} ${OBJS}
+
+fclean: clean
+	${RM} ${NAME}
+
+re: fclean all
+

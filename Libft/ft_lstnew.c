@@ -6,7 +6,7 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:44:20 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/05/06 14:00:54 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 17:04:27 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *new;
+	t_list	*new;
 
-	new = (t_list*)malloc(sizeof(t_list));
-	if(!new)
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
 		return (NULL);
 	new ->content = content;
 	new ->next = NULL;

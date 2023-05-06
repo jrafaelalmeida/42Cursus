@@ -6,7 +6,7 @@
 #    By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/29 16:05:43 by jpacheco          #+#    #+#              #
-#    Updated: 2023/05/06 16:29:40 by jpacheco         ###   ########.fr        #
+#    Updated: 2023/05/06 16:39:15 by jpacheco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ BonusSRCS = ft_lstnew.c      ft_lstlast.c      ft_lstiter.c\
 		ft_lstsize.c     ft_lstdelone.c    ft_lstclear.c\
 		ft_lstadd_back.c ft_lstadd_front.c ft_lstmap.c \
 
-BonusOBJS := ${BonusSRCS: .c=.o}
+BonusOBJS := ${BonusSRCS:.c=.o}
 
 CC:=cc
 CFLAGS := -Wall -Wextra -Werror

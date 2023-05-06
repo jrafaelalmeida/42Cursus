@@ -6,7 +6,7 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:52:21 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/05/06 14:24:51 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 17:02:53 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new)
-		return;
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

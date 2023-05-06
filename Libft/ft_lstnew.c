@@ -6,11 +6,11 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:44:20 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/05/02 20:55:18 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 14:00:54 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include "libft.h"
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

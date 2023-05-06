@@ -6,30 +6,62 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 21:13:33 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/05/02 20:09:07 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 13:54:49 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*reverse(char str[], int length)
+
+static void	ft_fill_res(int size, int offset, int n, char *res)
 {
-	int	start;
-	int	end;
-	char	temp;
-	
-	start = 0;
-	end = length - 1;
-	while(start < end)
+	while (size > offset)
 	{
-		temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		end--;
-		start++;
+		res[size - 1] = n % 10 + '0';
+		n /= 10;
+		size--;
 	}
+}
+
+static long int	get_size(long int n)
+{
+	long int	size;
+
+	size = 0;
+	if (n <= 0)
+		size++;
+	while (n != 0)
+	{
+		n /= 10;
+		size++;
+	}
+	return (size);
 }
 char	*ft_itoa(int n)
 {
-	 
+	char		*res;
+	int			offset;
+	long int	len;
+
+	offset = 0;
+	len = get_size(n);
+	res = malloc(sizeof(char) * len + 1);
+	if (!(res))
+		return (NULL);
+	if (n == -2147483648)
+	{
+		res[0] = '-';
+		res[1] = '2';
+		n = 147483648;
+		offset = 2;
+	}
+	if (n < 0)
+	{
+		res[0] = '-';
+		n *= -1;
+		offset++;
+	}
+	ft_fill_res(len, offset, n, res);
+	res[len] = '\0';
+	return (res);
 }

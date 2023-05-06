@@ -6,7 +6,7 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 21:08:56 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/04/27 21:08:56 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 13:47:03 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		while (n != 0)
 		{
 			n--;
-			(char *)dest[n] = (char *)src[n];
+			((char *)dest)[n] = ((char *)src)[n];
 		}
 	}
 	else if (src > dest)

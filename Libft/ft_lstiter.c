@@ -6,7 +6,7 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 21:38:56 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/05/02 21:51:07 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 14:10:33 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst)
-		return (NULL);
+		return ;
 	while (lst)
 	{
 		f(lst->content);

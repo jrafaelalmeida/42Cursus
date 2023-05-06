@@ -6,7 +6,7 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 21:24:03 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/05/02 21:28:02 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 14:19:34 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (!new)
-		return (NULL);
+		return ;
 	if (!*lst)
 	{
 		*lst = new;

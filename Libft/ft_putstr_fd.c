@@ -6,16 +6,16 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 21:14:29 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/04/27 22:22:06 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 15:53:08 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	len;
-	
+
 	len = 0;
 	if (!s)
 		return ;

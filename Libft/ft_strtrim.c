@@ -6,7 +6,7 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 21:13:15 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/05/02 20:08:59 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 16:05:17 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	while (s1) //passa á frente os carateres iguais ao set
+	while (s1)
 	{
 		if (check_char(((char)*s1), set) == 1)
 			s1++;
@@ -41,16 +41,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 			break ;
 	}
 	len = ft_strlen(s1);
-	while (len != 0)//passa á frente os carateres iguais ao set
+	while (len != 0)
 	{
 		if (check_char(s1[len - 1], set) == 1)
 			len--;
 		else
 			break ;
 	}
-	new = malloc(sizeof(char) * len + 1); // aloca a memoria necessária mais um para o null terminator
+	new = malloc(sizeof(char) * len + 1);
 	if (!new)
 		return (NULL);
-	ft_strlcpy(new, (char *)s1, len + 1);//copia o restante da s1 para a memoria alocada
+	ft_strlcpy(new, (char *)s1, len + 1);
 	return (new);
 }

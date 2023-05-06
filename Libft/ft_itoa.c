@@ -6,12 +6,11 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 21:13:33 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/05/06 13:54:49 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 15:52:48 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static void	ft_fill_res(int size, int offset, int n, char *res)
 {
@@ -37,6 +36,7 @@ static long int	get_size(long int n)
 	}
 	return (size);
 }
+
 char	*ft_itoa(int n)
 {
 	char		*res;

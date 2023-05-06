@@ -6,7 +6,7 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 21:12:47 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/05/02 20:15:07 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/05/06 16:01:33 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 
-	if(!s)
-		return(NULL);
-	if(len > ft_strlen(s) - start)
+	if (!s)
+		return (NULL);
+	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));

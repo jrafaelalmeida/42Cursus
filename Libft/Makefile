@@ -6,7 +6,7 @@
 #    By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/29 16:05:43 by jpacheco          #+#    #+#              #
-#    Updated: 2023/05/06 16:39:15 by jpacheco         ###   ########.fr        #
+#    Updated: 2023/05/11 21:53:10 by jpacheco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,9 +24,9 @@ SRCS = ft_strtrim.c     ft_atoi.c         ft_isprint.c    ft_strlen.c\
 
 OBJS := ${SRCS:.c=.o}
 
-BonusSRCS = ft_lstnew.c      ft_lstlast.c      ft_lstiter.c\
-		ft_lstsize.c     ft_lstdelone.c    ft_lstclear.c\
-		ft_lstadd_back.c ft_lstadd_front.c ft_lstmap.c \
+BonusSRCS = ft_lstnew_bonus.c      ft_lstlast_bonus.c      ft_lstiter_bonus.c\
+		ft_lstsize_bonus.c     ft_lstdelone_bonus.c    ft_lstclear_bonus.c\
+		ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstmap_bonus.c \
 
 BonusOBJS := ${BonusSRCS:.c=.o}
 
@@ -38,7 +38,7 @@ CL := ar -rc
 RL := ar -s
 
 
-${NAME}: ${OBJS} ${BonusOBJS}
+${NAME}: ${OBJS}
 	${CL} ${NAME} ${OBJS}
 	${RL} ${NAME}
 	echo 'libft done'

@@ -31,7 +31,7 @@ BonusSRCS = ft_lstnew_bonus.c      ft_lstlast_bonus.c      ft_lstiter_bonus.c\
 BonusOBJS := ${BonusSRCS:.c=.o}
 
 CC:=cc
-CFLAGS := -Wall -Wextra -Werror
+CFLAGS := -Wall -Wextra -Werror -g
 
 RM := /bin/rm -rf
 CL := ar -rc

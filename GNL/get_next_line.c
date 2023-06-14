@@ -6,7 +6,7 @@
 /*   By: jpacheco <jpacheco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 20:34:50 by jpacheco          #+#    #+#             */
-/*   Updated: 2023/06/13 20:34:51 by jpacheco         ###   ########.fr       */
+/*   Updated: 2023/06/14 22:53:20 by jpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,9 @@ char	*get_new_line(char *stash)
 	int		len;
 	char	*new_line;
 
-	len = ft_strclen(stash, '\n'); //Valida o tamanho da string até /n
-	new_line = malloc(sizeof(char) * (len + 2));//aloca memoria para o tamanho da nova linha +2 (\n e \0)
-	if (!new_line)//Allocation fails
+	len = ft_strclen(stash, '\n');
+	new_line = malloc(sizeof(char) * (len + 2));
+	if (!new_line)
 		return (NULL);
 	if (stash[0] != '\n')
 		ft_strncpy(new_line, stash, len);

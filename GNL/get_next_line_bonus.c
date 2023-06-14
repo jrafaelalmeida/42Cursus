@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*clean_memory(char **stash, char **buffer)
 {
@@ -82,19 +82,19 @@ char	*get_new_line(char *stash)
 
 char	*get_next_line(int fd)
 {
-	static char	*stash;
+	static char	*stash[OPENF_MAX];
 	char		*next_line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (!stash)
-		stash = NULL;
-	stash = read_file(fd, stash);
-	if (!stash)
+	if (!stash[fd])
+		stash[fd] = NULL;
+	stash[fd] = read_file(fd, stash[fd]);
+	if (!stash[fd])
 		return (NULL);
-	next_line = get_new_line(stash);
+	next_line = get_new_line(stash[fd]);
 	if (!next_line)
 		return (NULL);
-	stash = store_leftovers(stash);
+	stash[fd] = store_leftovers(stash[fd]);
 	return (next_line);
 }
